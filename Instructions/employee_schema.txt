@@ -1,0 +1,134 @@
+# Simple Conceptual ERD
+Department
+-
+department_no
+department_name
+
+Dept_emp
+-
+emp_no
+dept_no
+from_date
+to_date
+
+Dept_manager
+-
+dept_no
+emp_no
+from_date
+to_date
+
+Employees
+-
+emp_no
+birth_date
+first_name
+last_name
+gender
+hire_date
+
+Salaries
+-
+emp_no
+salary
+from_date
+to_date
+
+Titles
+-
+emp_no
+title
+from_date
+to_date
+
+
+
+
+# Logical ERD
+Department
+-
+department_no VARCHAR PK
+department_name VARCHAR  
+
+Dept_emp
+-
+emp_no INTEGER PK
+dept_no VARCHAR
+from_date DATE
+to_date DATE
+
+Dept_manager
+-
+dept_no VARCHAR PK
+emp_no INTEGER
+from_date DATE
+to_date DATE
+
+Employees
+-
+emp_no INTEGER PK
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+gender VARCHAR
+hire_date DATE
+
+Salaries
+-
+emp_no INTEGER PK
+salary INTEGER
+from_date DATE
+to_date DATE
+
+Titles
+-
+emp_no INTEGER PK
+title VARCHAR
+from_date DATE
+to_date DATE
+
+
+
+# Physical Relationships
+Department
+-
+department_no VARCHAR PK
+department_name VARCHAR  
+
+Dept_emp
+-
+emp_no INTEGER PK
+dept_no VARCHAR FK - Department.department_no
+from_date DATE
+to_date DATE
+
+Dept_manager
+-
+dept_no VARCHAR PK
+emp_no INTEGER FK - Employees.emp_no
+from_date DATE
+to_date DATE
+
+Employees
+-
+emp_no INTEGER PK
+birth_date DATE
+first_name VARCHAR
+last_name VARCHAR
+gender VARCHAR
+hire_date DATE
+
+Salaries
+-
+emp_no INTEGER PK
+salary INTEGER
+from_date DATE
+to_date DATE
+
+Titles
+-
+emp_no INTEGER PK
+title VARCHAR
+from_date DATE
+to_date DATE
+
